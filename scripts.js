@@ -1,10 +1,10 @@
 // 側拉清單控制
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
-    if (sidebar.classList.contains('open')) {
-        sidebar.classList.remove('open');
+    if (sidebar.style.left === '0px') {
+        sidebar.style.left = '-250px';  // 隱藏側拉選單
     } else {
-        sidebar.classList.add('open');
+        sidebar.style.left = '0px';  // 顯示側拉選單
     }
 }
 
