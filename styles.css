@@ -1,16 +1,26 @@
 /* 側拉選單 */
 .sidebar {
-    width: 250px;
-    height: 100%;
     position: fixed;
     top: 0;
-    left: -250px;  /* 初始時隱藏選單 */
-    background-color: #333;
-    color: white;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #f4f4f4;
     overflow-x: hidden;
-    transition: left 0.3s;
+    transition: 0.3s;
     padding-top: 20px;
 }
+
+/* 提示訊息樣式 */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position
 
 .sidebar .close-btn {
     font-size: 20px;
