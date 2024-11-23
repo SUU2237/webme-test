@@ -5,12 +5,7 @@ body, h1, h2, h3, ul, li, a, button {
     font-family: Arial, sans-serif;
 }
 
-/* 主體排版 */
-body {
-    display: flex;
-    margin: 0;
-}
-
+/* 側拉清單樣式 */
 .sidebar {
     width: 250px;
     background-color: #333;
@@ -27,23 +22,28 @@ body {
     transform: translateX(0);
 }
 
-.sidebar h2 {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
 .sidebar ul {
     list-style: none;
 }
 
 .sidebar ul li {
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 .sidebar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: white;
     font-size: 18px;
+}
+
+.submenu {
+    display: none; /* 初始隱藏 */
+    padding-left: 15px;
+}
+
+.submenu li a {
+    font-size: 16px;
+    color: #ddd;
 }
 
 .open-btn {
@@ -60,10 +60,11 @@ body {
     cursor: pointer;
     background-color: transparent;
     border: none;
-    color: #fff;
+    color: white;
     float: right;
 }
 
+/* 主內容樣式 */
 .main-content {
     margin-left: 20px;
     flex: 1;
@@ -86,9 +87,4 @@ button {
 
 button:hover {
     background-color: #0056b3;
-}
-
-/* 購物車 */
-#cart-items {
-    margin-top: 20px;
 }
