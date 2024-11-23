@@ -1,6 +1,7 @@
 // 側拉清單控制
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
+    console.log("Toggle Sidebar");
     if (sidebar.style.left === '0px') {
         sidebar.style.left = '-250px';  // 隱藏側拉選單
     } else {
@@ -11,6 +12,7 @@ function toggleSidebar() {
 // 顯示或隱藏子菜單
 function toggleSubmenu(submenuId) {
     const submenu = document.getElementById(submenuId);
+    console.log("Toggle Submenu: " + submenuId);
     submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
 }
 
