@@ -4,16 +4,12 @@
     height: 100%;
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px;  /* 初始時隱藏選單 */
     background-color: #333;
     color: white;
     overflow-x: hidden;
     transition: left 0.3s;
     padding-top: 20px;
-}
-
-.sidebar.open {
-    left: 0;
 }
 
 .sidebar .close-btn {
