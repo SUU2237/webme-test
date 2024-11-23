@@ -12,17 +12,19 @@
         <button class="close-btn" onclick="toggleSidebar()">×</button>
         <h2>網站架構</h2>
         <ul>
-            <li><a href="#home" onclick="showMenu()">首頁</a></li>
+            <li>
+                <a href="#home" onclick="toggleMenu()">首頁</a>
+                <ul id="food-menu" class="submenu">
+                    <li><a href="#menu">菜單</a></li>
+                    <li><a href="#toast">土司</a></li>
+                    <li><a href="#pancake">蛋餅</a></li>
+                    <li><a href="#burger">漢堡</a></li>
+                    <li><a href="#pasta">鐵板麵</a></li>
+                    <li><a href="#drink">飲料</a></li>
+                    <li><a href="#random">隨機餐點搭配</a></li>
+                </ul>
+            </li>
             <li><a href="#cart">購物車</a></li>
-            <div id="food-menu" style="display: none;">
-                <li><a href="#menu">菜單</a></li>
-                <li><a href="#toast">土司</a></li>
-                <li><a href="#pancake">蛋餅</a></li>
-                <li><a href="#burger">漢堡</a></li>
-                <li><a href="#pasta">鐵板麵</a></li>
-                <li><a href="#drink">飲料</a></li>
-                <li><a href="#random">隨機餐點搭配</a></li>
-            </div>
         </ul>
     </div>
 
