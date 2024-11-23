@@ -3,10 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>訂單系統</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>This is my first GitHub Pages site.</p>
+    <!-- 側拉清單 -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <h2>網站架構</h2>
+        <ul>
+            <li><a href="#home">首頁</a></li>
+            <li><a href="#menu">菜單</a></li>
+            <li><a href="#toast">土司</a></li>
+            <li><a href="#pancake">蛋餅</a></li>
+            <li><a href="#burger">漢堡</a></li>
+            <li><a href="#pasta">鐵板麵</a></li>
+            <li><a href="#drink">飲料</a></li>
+            <li><a href="#random">隨機餐點搭配</a></li>
+            <li><a href="#cart">購物車</a></li>
+        </ul>
+    </div>
+
+    <!-- 主內容 -->
+    <div class="main-content">
+        <button class="open-btn" onclick="toggleSidebar()">☰</button>
+        <h1 id="home">歡迎來到訂單系統</h1>
+        <section id="menu">
+            <h2>菜單</h2>
+            <div class="menu-section">
+                <h3 id="toast">土司</h3>
+                <button onclick="addToCart('土司', 50)">加入購物車</button>
+            </div>
+            <div class="menu-section">
+                <h3 id="pancake">蛋餅</h3>
+                <button onclick="addToCart('蛋餅', 40)">加入購物車</button>
+            </div>
+            <div class="menu-section">
+                <h3 id="burger">漢堡</h3>
+                <button onclick="addToCart('漢堡', 60)">加入購物車</button>
+            </div>
+            <div class="menu-section">
+                <h3 id="pasta">鐵板麵</h3>
+                <button onclick="addToCart('鐵板麵', 70)">加入購物車</button>
+            </div>
+            <div class="menu-section">
+                <h3 id="drink">飲料</h3>
+                <button onclick="addToCart('飲料', 30)">加入購物車</button>
+            </div>
+            <div class="menu-section">
+                <h3 id="random">隨機餐點搭配</h3>
+                <button onclick="addToCart('隨機餐點搭配', 100)">加入購物車</button>
+            </div>
+        </section>
+        <section id="cart">
+            <h2>購物車</h2>
+            <div id="cart-items"></div>
+            <h3 id="total-price">總金額: $0</h3>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
