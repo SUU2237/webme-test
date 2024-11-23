@@ -5,12 +5,12 @@ function toggleSidebar() {
 }
 
 // 顯示或隱藏子菜單
-function toggleMenu() {
-    const foodMenu = document.getElementById('food-menu');
-    if (foodMenu.style.display === 'none' || foodMenu.style.display === '') {
-        foodMenu.style.display = 'block'; // 顯示子菜單
+function toggleSubmenu(submenuId) {
+    const submenu = document.getElementById(submenuId);
+    if (submenu.style.display === 'none' || submenu.style.display === '') {
+        submenu.style.display = 'block'; // 顯示子菜單
     } else {
-        foodMenu.style.display = 'none'; // 隱藏子菜單
+        submenu.style.display = 'none'; // 隱藏子菜單
     }
 }
 
