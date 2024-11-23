@@ -4,6 +4,12 @@ function toggleSidebar() {
     sidebar.classList.toggle('open');
 }
 
+// 顯示菜單項目
+function showMenu() {
+    const foodMenu = document.getElementById('food-menu');
+    foodMenu.style.display = 'block'; // 顯示菜單項目
+}
+
 // 購物車邏輯
 let cart = [];
 let totalPrice = 0;
