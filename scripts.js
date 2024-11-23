@@ -1,17 +1,17 @@
 // 側拉清單控制
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('open');
+    if (sidebar.classList.contains('open')) {
+        sidebar.classList.remove('open');
+    } else {
+        sidebar.classList.add('open');
+    }
 }
 
 // 顯示或隱藏子菜單
 function toggleSubmenu(submenuId) {
     const submenu = document.getElementById(submenuId);
-    if (submenu.style.display === 'none' || submenu.style.display === '') {
-        submenu.style.display = 'block'; // 顯示子菜單
-    } else {
-        submenu.style.display = 'none'; // 隱藏子菜單
-    }
+    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
 }
 
 // 動態切換內容
