@@ -23,7 +23,7 @@
                     <li><a href="#random" onclick="showContent('random')">隨機餐點搭配</a></li>
                 </ul>
             </li>
-            <li><a href="#cart">購物車</a></li>
+            <li><a href="#cart" onclick="showCart()">購物車</a></li>
         </ul>
     </div>
 
@@ -33,6 +33,16 @@
         <div id="content">
             <h1>歡迎來到訂單系統</h1>
             <p>請從左側選單中選擇分類以顯示內容。</p>
+        </div>
+    </div>
+
+    <!-- 購物車 -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close-btn" onclick="closeCart()">×</span>
+            <h2>購物車</h2>
+            <ul id="cart-items"></ul>
+            <p>總金額: <span id="total-price">$0</span></p>
         </div>
     </div>
 
