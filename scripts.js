@@ -4,10 +4,14 @@ function toggleSidebar() {
     sidebar.classList.toggle('open');
 }
 
-// 顯示菜單項目
-function showMenu() {
+// 顯示或隱藏子菜單
+function toggleMenu() {
     const foodMenu = document.getElementById('food-menu');
-    foodMenu.style.display = 'block'; // 顯示菜單項目
+    if (foodMenu.style.display === 'none' || foodMenu.style.display === '') {
+        foodMenu.style.display = 'block'; // 顯示子菜單
+    } else {
+        foodMenu.style.display = 'none'; // 隱藏子菜單
+    }
 }
 
 // 購物車邏輯
