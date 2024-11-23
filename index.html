@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebMe！</title>
+    <title>訂單系統</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- 側拉清單 -->
     <div class="sidebar" id="sidebar">
         <button class="close-btn" onclick="toggleSidebar()">×</button>
-        <h2>點餐</h2>
+        <h2>網站架構</h2>
         <ul class="menu">
             <li>
                 <a href="#" onclick="toggleSubmenu('submenu-home')">首頁</a>
                 <ul id="submenu-home" class="submenu">
-                    <li><a href="#toast" onclick="showContent('toast')">土司</a></li>
-                    <li><a href="#pancake" onclick="showContent('pancake')">蛋餅</a></li>
-                    <li><a href="#burger" onclick="showContent('burger')">漢堡</a></li>
-                    <li><a href="#pasta" onclick="showContent('pasta')">鐵板麵</a></li>
-                    <li><a href="#drink" onclick="showContent('drink')">飲料</a></li>
-                    <li><a href="#random" onclick="showContent('random')">隨機餐點搭配</a></li>
+                    <li><a href="#toast" onclick="showContent('toast', true)">土司</a></li>
+                    <li><a href="#pancake" onclick="showContent('pancake', true)">蛋餅</a></li>
+                    <li><a href="#burger" onclick="showContent('burger', true)">漢堡</a></li>
+                    <li><a href="#pasta" onclick="showContent('pasta', true)">鐵板麵</a></li>
+                    <li><a href="#drink" onclick="showContent('drink', true)">飲料</a></li>
+                    <li><a href="#random" onclick="showContent('random', true)">隨機餐點搭配</a></li>
                 </ul>
             </li>
-            <li><a href="#cart" onclick="showCart()">購物車</a></li>
+            <li>
+                <a href="#cart" onclick="showCart()">購物車 <span id="cart-count">(0)</span></a>
+            </li>
         </ul>
     </div>
 
@@ -31,8 +33,8 @@
     <div class="main-content">
         <button class="open-btn" onclick="toggleSidebar()">☰</button>
         <div id="content">
-            <h1>歡迎光臨WebMe！</h1>
-            <p>請按左側選單點餐</p>
+            <h1>歡迎來到訂單系統</h1>
+            <p>請從左側選單中選擇分類以顯示內容。</p>
         </div>
     </div>
 
@@ -45,6 +47,9 @@
             <p>總金額: <span id="total-price">$0</span></p>
         </div>
     </div>
+
+    <!-- 提示訊息 -->
+    <div id="toast-notification" class="toast"></div>
 
     <script src="scripts.js"></script>
 </body>
