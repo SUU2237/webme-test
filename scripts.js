@@ -21,6 +21,17 @@ function showContent(category, closeSidebar = false) {
     const content = document.getElementById('content');
     let html = '';
 
+    //隨機餐點搭配
+    switch (category) {
+        case 'random':
+            html = `
+                <h2>隨機餐點搭配</h2>
+                <p id="random-selection">請按下隨機搭配按鈕來生成餐點。</p>
+                <button onclick="generateRandomCombo()">隨機搭配</button>
+                <button id="add-random-to-cart" style="display:none;" onclick="addRandomToCart()">加入購物車</button>
+            `;
+            break;
+
     // 根據分類切換內容
     switch (category) {
         case 'toast':
@@ -77,6 +88,54 @@ function showContent(category, closeSidebar = false) {
     }
 
     content.innerHTML = html;
+}
+
+// 隨機搭配功能
+const foods = [
+    { name: '豬排蛋土司', price: 50 },
+    { name: '鮪魚蛋土司', price: 55 },
+    { name: '原味蛋餅', price: 40 },
+    { name: '雞肉鐵板麵', price: 70 },
+    { name: '牛肉漢堡', price: 60 }
+];
+
+const drinks = [
+    { name: '紅茶', price: 20 },
+    { name: '奶茶', price: 30 },
+    { name: '咖啡', price: 40 }
+];
+
+let currentCombo = null; // 儲存當前隨機搭配
+
+//隨機搭配
+function generateRandomCombo() {
+    const randomFood = foods[Math.floor(Math.random() * foods.length)];
+    const randomDrink = drinks[Math.floor(Math.random() * drinks.length)];
+    currentCombo = {
+        items: [randomFood.name, randomDrink.name],
+        total: randomFood.price + randomDrink.price
+    };
+
+    const selectionElement = document.getElementById('random-selection');
+    selectionElement.innerHTML = `
+        餐點: ${randomFood.name} + 飲料: ${randomDrink.name} <br>
+        價格: $${currentCombo.total}
+    `;
+
+    const addButton = document.getElementById('add-random-to-cart');
+    addButton.style.display = 'inline-block'; // 顯示加入購物車按鈕
+}
+
+// 將隨機搭配加入購物車
+function addRandomToCart() {
+    if (currentCombo) {
+        currentCombo.items.forEach(item => cart.push({ item, price: currentCombo.total / 2 })); // 拆分價格
+        totalPrice += currentCombo.total;
+        cartCount += currentCombo.items.length;
+
+        updateCart();
+        showNotification('隨機搭配已加入購物車');
+    }
 }
 
 // 加入購物車
