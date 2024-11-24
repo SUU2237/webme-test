@@ -85,8 +85,7 @@ function showContent(category, closeSidebar = false) {
             `;
             break;
             
-        default:
-            html = '<p>請選擇分類以顯示內容。</p>';
+        
     }
 
     content.innerHTML = html;
