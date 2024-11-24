@@ -27,9 +27,9 @@ function showContent(category, closeSidebar = false) {
             html = `
                 <h2>土司</h2>
                 <ul>
-                    <li>豬排蛋土司 - $50 <button onclick="addToCart('豬排蛋土司', 50)">加入購物車</button></li>
-                    <li>鮪魚蛋土司 - $55 <button onclick="addToCart('鮪魚蛋土司', 55)">加入購物車</button></li>
-                    <li>火腿起司土司 - $60 <button onclick="addToCart('火腿起司土司', 60)">加入購物車</button></li>
+                    <li>豬排蛋土司 - $50 <button onclick="addToCart('豬排蛋吐司', 50)">加入購物車</button></li>
+                    <li>鮪魚蛋土司 - $55 <button onclick="addToCart('鮪魚蛋吐司', 55)">加入購物車</button></li>
+                    <li>火腿起司土司 - $60 <button onclick="addToCart('火腿起司吐司', 60)">加入購物車</button></li>
                 </ul>
             `;
             break;
