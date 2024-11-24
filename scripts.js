@@ -130,7 +130,8 @@ function generateRandomCombo() {
 // 將隨機搭配加入購物車
 function addRandomToCart() {
     if (currentCombo) {
-        currentCombo.items.forEach(item => cart.push({ item, price: currentCombo.total / 2 })); // 拆分價格
+        //currentCombo.items.forEach(item => cart.push({ item, price: currentCombo.total }));
+        cart.push({item, total});
         totalPrice += currentCombo.total;
         cartCount += currentCombo.items.length;
 
