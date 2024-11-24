@@ -130,12 +130,16 @@ function generateRandomCombo() {
 // 將隨機搭配加入購物車
 function addRandomToCart() {
     if (currentCombo) {
-        cart.push({items, total});
+        cart.push({
+            item: currentCombo.items,
+            price: currentCombo.total
+        });
+
         totalPrice += currentCombo.total;
-        cartCount += currentCombo.items.length;
+        cartCount++;
 
         updateCart();
-        showNotification('隨機搭配已加入購物車');
+        showNotification(`隨機搭配「${currentCombo.items}」已加入購物車`);
     }
 }
 
