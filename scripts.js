@@ -22,15 +22,7 @@ function showContent(category, closeSidebar = false) {
     let html = '';
 
     //隨機餐點搭配
-    switch (category) {
-        case 'random':
-            html = `
-                <h2>隨機餐點搭配</h2>
-                <p id="random-selection">請按下隨機搭配按鈕來生成餐點。</p>
-                <button onclick="generateRandomCombo()">隨機搭配</button>
-                <button id="add-random-to-cart" style="display:none;" onclick="addRandomToCart()">加入購物車</button>
-            `;
-            break;
+    
 
     // 根據分類切換內容
     switch (category) {
@@ -83,6 +75,16 @@ function showContent(category, closeSidebar = false) {
                 </ul>
             `;
             break;
+
+        case 'random':
+            html = `
+                <h2>隨機餐點搭配</h2>
+                <p id="random-selection">請按下隨機搭配按鈕來生成餐點。</p>
+                <button onclick="generateRandomCombo()">隨機搭配</button>
+                <button id="add-random-to-cart" style="display:none;" onclick="addRandomToCart()">加入購物車</button>
+            `;
+            break;
+            
         default:
             html = '<p>請選擇分類以顯示內容。</p>';
     }
